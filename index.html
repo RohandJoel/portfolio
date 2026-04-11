@@ -3,729 +3,283 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deva Rohan Joel — HCI & UX Research</title>
+<title>Deva Rohan Joel | HCI Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-shell">
+    <header class="topbar" id="topbar">
+      <a href="#home" class="brand">
+        <span class="brand-mark">DRJ</span>
+        <span class="brand-copy">Human-centered interfaces, research-led systems.</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
+    </header>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-logo" onclick="showPage('home')">DRJ</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#" onclick="showPage('home')" data-page="home">Home</a></li>
-    <li><a href="#" onclick="showPage('projects')" data-page="projects">Projects</a></li>
-    <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
-    <li><a href="#" onclick="showPage('resume')" data-page="resume">Resume</a></li>
-    <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact</a></li>
-  </ul>
-  <div class="nav-menu" onclick="toggleMenu()" id="menuBtn">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<!-- ══════════════ HOME PAGE ══════════════ -->
-<div id="page-home" class="page active">
-
-  <section class="home-hero reveal">
-    <div class="eyebrow">HCI & UX Research Candidate</div>
-    <h1 class="hero-name">Deva Rohan Joel</h1>
-    <p class="hero-role">Designing for humans.</p>
-    <p class="hero-intro">B.Tech Computer Science student specialising in Human-Computer Interaction. I build inclusive, empathy-driven digital experiences grounded in research and tested with real users.</p>
-    <div class="hero-ctas">
-      <button class="btn-primary" onclick="showPage('projects')">View Projects →</button>
-      <button class="btn-secondary" onclick="showPage('resume')">Download Resume</button>
-    </div>
-  </section>
-
-  <div class="stats-row">
-    <div class="stat-item reveal reveal-delay-1">
-      <div class="stat-num">3+</div>
-      <div class="stat-label">UX Case Studies</div>
-    </div>
-    <div class="stat-item reveal reveal-delay-2">
-      <div class="stat-num">4+</div>
-      <div class="stat-label">Years of Study</div>
-    </div>
-    <div class="stat-item reveal reveal-delay-3">
-      <div class="stat-num">HCI</div>
-      <div class="stat-label">Masters Target</div>
-    </div>
-    <div class="stat-item reveal reveal-delay-4">
-      <div class="stat-num">DE</div>
-      <div class="stat-label">Germany Focus</div>
-    </div>
-  </div>
-
-  <section>
-    <div class="section-header reveal">
-      <h2 class="section-title">Selected Work</h2>
-      <span class="section-count">03 Projects</span>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <div class="projects-grid">
-      <!-- Featured -->
-      <div class="project-card featured reveal" onclick="showCase('lunacare')">
-        <div class="featured-content">
-          <div class="card-tags">
-            <span class="tag">UX Research</span>
-            <span class="tag">Conversational UI</span>
-            <span class="tag">Accessibility</span>
-          </div>
-          <div class="card-num">01 — Featured</div>
-          <h3 class="card-title">LunaCare Health Community</h3>
-          <p class="card-desc">A conversational interface helping women navigate menstrual wellness through HCI-informed interaction patterns. Reduced cognitive load through progressive disclosure.</p>
-        </div>
-        <div class="featured-visual">
-          <div class="featured-visual-inner">
-            <div></div>
-            <div></div>
-            <div></div>
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Portfolio 2026</p>
+          <h1>Designing calm, trust, and clarity for people under cognitive pressure.</h1>
+          <p class="hero-text">
+            I am Deva Rohan Joel, an HCI and UX researcher shaping health, civic, and service interfaces.
+            My work focuses on how systems feel when users are confused, vulnerable, or overloaded.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary magnetic">Explore Selected Work</a>
+            <a href="#contact" class="button button-secondary magnetic">Start a Conversation</a>
           </div>
         </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="project-card reveal reveal-delay-1" onclick="showCase('femcare')">
-        <div class="card-tags"><span class="tag">UX</span><span class="tag">Community</span></div>
-        <div class="card-num">02</div>
-        <h3 class="card-title">FemCare Community 2.0</h3>
-        <p class="card-desc">Women's health platform for peer support, resources, and empathy-driven digital interactions — deployed for users aged 11–40.</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="project-card reveal reveal-delay-2" onclick="showCase('grievance')">
-        <div class="card-tags"><span class="tag">Redesign</span><span class="tag">Civic Tech</span></div>
-        <div class="card-num">03</div>
-        <h3 class="card-title">Grievance Portal</h3>
-        <p class="card-desc">A civic complaint management portal designed to streamline grievance resolution for government stakeholders through end-to-end interaction design.</p>
-      </div>
-    </div>
-  </section>
-
-  <section style="background: var(--paper-warm); padding: 80px var(--gutter); max-width: 100%; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
-    <div style="max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 32px;">
-      <div class="reveal">
-        <p class="eyebrow">Applying to</p>
-        <h2 style="font-family: var(--serif); font-size: clamp(24px, 4vw, 40px); letter-spacing: -0.02em;">Masters in HCI — German Universities</h2>
-        <p style="font-size: 15px; color: var(--ink-mid); margin-top: 12px;">LMU München · TU Berlin · RWTH Aachen · HPI Potsdam</p>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <span>© 2025 Deva Rohan Joel</span>
-    <span>HCI & UX Research Portfolio</span>
-  </footer>
-</div>
-
-<!-- ══════════════ PROJECTS PAGE ══════════════ -->
-<div id="page-projects" class="page">
-  <section>
-    <div class="section-header reveal">
-      <h2 class="section-title">All Projects</h2>
-      <span class="section-count">03 Total</span>
-    </div>
-
-    <div class="filter-row reveal">
-      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-      <button class="filter-btn" onclick="filterProjects('ux', this)">UX</button>
-      <button class="filter-btn" onclick="filterProjects('research', this)">Research</button>
-      <button class="filter-btn" onclick="filterProjects('accessibility', this)">Accessibility</button>
-      <button class="filter-btn" onclick="filterProjects('redesign', this)">Redesign</button>
-    </div>
-
-    <div class="projects-grid" id="projects-all">
-      <div class="project-card featured reveal" data-tags="ux,research,accessibility" onclick="showCase('lunacare')">
-        <div class="featured-content">
-          <div class="card-tags">
-            <span class="tag">UX Research</span>
-            <span class="tag">Conversational UI</span>
-            <span class="tag">Accessibility</span>
+        <div class="hero-stage reveal reveal-delay-1">
+          <div class="signal-card signal-main">
+            <p class="signal-label">Current Focus</p>
+            <h2>Interaction systems that reduce friction before users even notice it.</h2>
+            <p>Research, service blueprinting, conversational flows, and inclusive interface design.</p>
           </div>
-          <div class="card-num">01 — 2026</div>
-          <h3 class="card-title">LunaCare Health Community</h3>
-          <p class="card-desc">Conversational interface for menstrual wellness. Applied progressive disclosure and HCI theory to reduce cognitive load in sensitive health interactions.</p>
-        </div>
-        <div class="featured-visual">
-          <div class="featured-visual-inner">
-            <div></div><div></div><div></div>
+          <div class="signal-grid">
+            <article class="signal-card">
+              <p class="signal-label">Approach</p>
+              <h3>Evidence before polish</h3>
+              <p>Every visual decision ties back to trust, comprehension, and task confidence.</p>
+            </article>
+            <article class="signal-card">
+              <p class="signal-label">Direction</p>
+              <h3>Germany-bound</h3>
+              <p>Applying to HCI-focused masters programs and building a sharper research portfolio.</p>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-card reveal reveal-delay-1" data-tags="ux,research,accessibility" onclick="showCase('femcare')">
-        <div class="card-tags"><span class="tag">UX</span><span class="tag">Research</span><span class="tag">Accessibility</span></div>
-        <div class="card-num">02 — 2025</div>
-        <h3 class="card-title">FemCare Community 2.0</h3>
-        <p class="card-desc">End-to-end UX process: user journey mapping, information architecture, and empathy-driven interaction design. Deployed SPA with structured usability testing.</p>
-      </div>
-
-      <div class="project-card reveal reveal-delay-2" data-tags="ux,redesign" onclick="showCase('grievance')">
-        <div class="card-tags"><span class="tag">UX</span><span class="tag">Redesign</span><span class="tag">Civic</span></div>
-        <div class="card-num">03 — 2024</div>
-        <h3 class="card-title">Grievance Portal</h3>
-        <p class="card-desc">Civic complaint management portal. End-to-end wireframes to high-fidelity prototype. Multi-device usability testing with structured feedback iteration.</p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <span>© 2025 Deva Rohan Joel</span>
-    <span>HCI & UX Research Portfolio</span>
-  </footer>
-</div>
-
-<!-- ══════════════ CASE STUDY: LUNACARE ══════════════ -->
-<div id="page-case-lunacare" class="page">
-  <div class="case-hero">
-    <button class="case-back" onclick="showPage('projects')">← Back to Projects</button>
-    <div class="case-hero-meta">
-      <span class="tag">UX Research</span>
-      <span class="tag">Conversational UI</span>
-      <span class="tag">Accessibility</span>
-    </div>
-    <h1 class="case-hero-title">LunaCare Health Community</h1>
-    <p class="case-subtitle">A conversational interface helping women navigate menstrual wellness through HCI-informed interaction patterns — reducing cognitive load through progressive disclosure.</p>
-    <div class="case-meta-grid">
-      <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">Feb – Mar 2026</div></div>
-      <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">UX Designer & Researcher</div></div>
-      <div class="meta-item"><div class="meta-label">Platform</div><div class="meta-value">Web SPA</div></div>
-      <div class="meta-item"><div class="meta-label">Methods</div><div class="meta-value">UX Research, Usability Testing</div></div>
-    </div>
-  </div>
-
-  <div class="case-nav-sticky" id="case-nav">
-    <div class="case-nav-inner">
-      <a href="#cs-overview" class="case-nav-link active" onclick="setCaseNav(this)">Overview</a>
-      <a href="#cs-problem" class="case-nav-link" onclick="setCaseNav(this)">Problem</a>
-      <a href="#cs-research" class="case-nav-link" onclick="setCaseNav(this)">Research</a>
-      <a href="#cs-wireframes" class="case-nav-link" onclick="setCaseNav(this)">Wireframes</a>
-      <a href="#cs-design" class="case-nav-link" onclick="setCaseNav(this)">Design</a>
-      <a href="#cs-impact" class="case-nav-link" onclick="setCaseNav(this)">Impact</a>
-      <a href="#cs-reflection" class="case-nav-link" onclick="setCaseNav(this)">Reflection</a>
-    </div>
-  </div>
-
-  <div id="cs-overview" class="case-section reveal">
-    <div class="case-section-label">01 — Overview</div>
-    <h2 class="case-section-title">Breaking the silence around menstrual health</h2>
-    <div class="two-col">
-      <div class="case-body">
-        <p>LunaCare began as an observation: most women's health applications approach menstrual wellness through clinical language and sterile data interfaces — creating barriers to the very conversations they're meant to enable.</p>
-        <p>I designed a conversational interface that uses progressive disclosure, empathetic microcopy, and HCI-informed interaction patterns to reduce cognitive load while surfacing the right information at the right moment.</p>
-      </div>
-      <div>
-        <div class="impact-grid" style="grid-template-columns:1fr 1fr; margin:0;">
-          <div class="impact-item"><div class="impact-num">↓40%</div><div class="impact-label">Cognitive load in user testing</div></div>
-          <div class="impact-item"><div class="impact-num">11–40</div><div class="impact-label">Target age range</div></div>
-          <div class="impact-item"><div class="impact-num">AI</div><div class="impact-label">Chatbot with 500+ intents</div></div>
-          <div class="impact-item"><div class="impact-num">SPA</div><div class="impact-label">Deployed on Vercel</div></div>
+      <section class="ticker-shell">
+        <div class="ticker">
+          <span>HCI Research</span>
+          <span>Accessibility</span>
+          <span>Conversational Interfaces</span>
+          <span>Service Design</span>
+          <span>Usability Testing</span>
+          <span>Information Architecture</span>
+          <span>Inclusive Design</span>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <div id="cs-problem" class="case-section reveal">
-    <div class="case-section-label">02 — Problem</div>
-    <h2 class="case-section-title">Health information shouldn't feel clinical</h2>
-    <div class="case-body">
-      <p>Women seeking menstrual health information navigate a fragmented ecosystem: medical websites use clinical jargon, social media spreads misinformation, and dedicated apps focus on tracking without education.</p>
-      <p>The core HCI challenge: how do you present sensitive, nuanced health information in a way that feels approachable — without sacrificing accuracy or depth?</p>
-    </div>
-    <ul class="insight-list" style="margin-top: 28px;">
-      <li class="insight-item">
-        <div class="insight-icon">01</div>
-        <div class="insight-text">Users aged 11–15 consistently rated existing apps as "confusing" or "scary" in preliminary interviews</div>
-      </li>
-      <li class="insight-item">
-        <div class="insight-icon">02</div>
-        <div class="insight-text">Information architecture in competitor apps was designed around medical workflows, not user mental models</div>
-      </li>
-      <li class="insight-item">
-        <div class="insight-icon">03</div>
-        <div class="insight-text">Zero applications in the market combined conversational AI with peer-community support effectively</div>
-      </li>
-    </ul>
-  </div>
+      <section class="section manifesto" id="process">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How I Work</p>
+          <h2>Not a portfolio of screens. A portfolio of decisions.</h2>
+        </div>
+        <div class="manifesto-grid">
+          <article class="manifesto-card reveal">
+            <span>01</span>
+            <h3>Read the user’s emotional state</h3>
+            <p>I design for hesitation, uncertainty, and fragile attention, not only happy-path clicks.</p>
+          </article>
+          <article class="manifesto-card reveal reveal-delay-1">
+            <span>02</span>
+            <h3>Make complexity feel navigable</h3>
+            <p>Dense systems become guided experiences through pacing, hierarchy, and interaction choreography.</p>
+          </article>
+          <article class="manifesto-card reveal reveal-delay-2">
+            <span>03</span>
+            <h3>Prototype the invisible layer</h3>
+            <p>I care about confidence, trust signals, and mental effort as much as layout and typography.</p>
+          </article>
+        </div>
+      </section>
 
-  <div id="cs-research" class="case-section reveal">
-    <div class="case-section-label">03 — Research</div>
-    <h2 class="case-section-title">Research Insights</h2>
-    <div class="two-col">
-      <div class="case-body">
-        <p>I conducted contextual interviews with 8 participants across the target age range (11–40), supplemented by competitive analysis of 6 existing health platforms.</p>
-        <p>User journey mapping revealed three critical pain points: discovery friction, trust barriers, and information overload in initial onboarding.</p>
-      </div>
-      <ul class="insight-list">
-        <li class="insight-item">
-          <div class="insight-icon">↑</div>
-          <div class="insight-text">Conversational tone rated 3.2× more trustworthy than formal clinical language across all age groups</div>
-        </li>
-        <li class="insight-item">
-          <div class="insight-icon">→</div>
-          <div class="insight-text">Progressive disclosure reduced onboarding drop-off by presenting one decision at a time</div>
-        </li>
-        <li class="insight-item">
-          <div class="insight-icon">✓</div>
-          <div class="insight-text">Community features increased return visits by creating social accountability</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="cs-wireframes" class="case-section reveal">
-    <div class="case-section-label">04 — Wireframes</div>
-    <h2 class="case-section-title">Low-fidelity to high-fidelity</h2>
-    <div class="case-body">
-      <p>I iterated through three rounds of wireframes, testing each with 3–5 users. Key design decisions emerged around chatbot placement, quick-reply patterns, and content hierarchy.</p>
-    </div>
-    <div class="screen-grid" style="margin-top: 36px;">
-      <div>
-        <div class="screen-mock">
-          <div class="screen-mock-bar"><div class="screen-dot"></div><div class="screen-dot"></div><div class="screen-dot"></div></div>
-          <div class="screen-body">
-            <div class="screen-line" style="width:60%"></div>
-            <div class="screen-block"></div>
-            <div class="screen-line"></div>
-            <div class="screen-line" style="width:80%"></div>
-            <div class="screen-line" style="width:40%"></div>
+      <section class="section projects" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Three systems, three different kinds of pressure.</h2>
+        </div>
+        <div class="projects-layout">
+          <div class="project-list">
+            <article class="project-tile reveal active" data-project="lunacare" tabindex="0">
+              <p class="project-meta">Health · Conversational UX</p>
+              <h3>LunaCare</h3>
+              <p>A menstrual wellness experience that reduces cognitive load with guided interaction and soft-friction onboarding.</p>
+              <div class="project-stats">
+                <span>Progressive disclosure</span>
+                <span>Research-informed flows</span>
+              </div>
+            </article>
+            <article class="project-tile reveal reveal-delay-1" data-project="femcare" tabindex="0">
+              <p class="project-meta">Community · Service Design</p>
+              <h3>FemCare 2.0</h3>
+              <p>A peer-support platform reworked around emotional safety, resource clarity, and navigational simplicity.</p>
+              <div class="project-stats">
+                <span>Journey mapping</span>
+                <span>Usability iteration</span>
+              </div>
+            </article>
+            <article class="project-tile reveal reveal-delay-2" data-project="grievance" tabindex="0">
+              <p class="project-meta">Civic Tech · Redesign</p>
+              <h3>Grievance Portal</h3>
+              <p>A dense government workflow translated into a clearer, step-led, accessible complaint journey.</p>
+              <div class="project-stats">
+                <span>Accessibility improvements</span>
+                <span>Multi-device testing</span>
+              </div>
+            </article>
           </div>
-        </div>
-        <p class="screen-label">Home — v1</p>
-      </div>
-      <div>
-        <div class="screen-mock">
-          <div class="screen-mock-bar"><div class="screen-dot"></div><div class="screen-dot"></div><div class="screen-dot"></div></div>
-          <div class="screen-body">
-            <div class="screen-line" style="width:50%"></div>
-            <div class="screen-line" style="height:60px; background: rgba(45,90,61,0.1); border-radius:4px;"></div>
-            <div class="screen-line"></div>
-            <div class="screen-line" style="width:70%"></div>
-          </div>
-        </div>
-        <p class="screen-label">Chatbot — v2</p>
-      </div>
-      <div>
-        <div class="screen-mock">
-          <div class="screen-mock-bar"><div class="screen-dot"></div><div class="screen-dot"></div><div class="screen-dot"></div></div>
-          <div class="screen-body">
-            <div class="screen-block"></div>
-            <div class="screen-line"></div>
-            <div class="screen-line" style="width:90%"></div>
-            <div class="screen-line" style="width:60%"></div>
-          </div>
-        </div>
-        <p class="screen-label">Education — v3</p>
-      </div>
-      <div>
-        <div class="screen-mock">
-          <div class="screen-mock-bar"><div class="screen-dot"></div><div class="screen-dot"></div><div class="screen-dot"></div></div>
-          <div class="screen-body">
-            <div class="screen-line" style="width:40%"></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0;">
-              <div class="screen-block" style="height:36px;"></div>
-              <div class="screen-block" style="height:36px;"></div>
+
+          <aside class="project-preview reveal" id="projectPreview">
+            <div class="preview-frame">
+              <p class="preview-kicker" id="previewKicker">Health · Conversational UX</p>
+              <h3 id="previewTitle">LunaCare</h3>
+              <p class="preview-body" id="previewBody">A menstrual wellness experience that reduces cognitive load with guided interaction and soft-friction onboarding.</p>
+              <div class="preview-panels" id="previewPanels">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
-            <div class="screen-line"></div>
+            <div class="preview-footer">
+              <div>
+                <p class="preview-label">Role</p>
+                <p id="previewRole">UX Designer & Researcher</p>
+              </div>
+              <button class="button button-primary magnetic" id="openProject" type="button">Open Case Note</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section lab">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Interaction Lab</p>
+          <h2>A portfolio that shifts perspective, not just sections.</h2>
+        </div>
+        <div class="lab-shell reveal">
+          <div class="lab-tabs" role="tablist" aria-label="Portfolio lenses">
+            <button class="lab-tab active" data-lens="research" type="button">Research Lens</button>
+            <button class="lab-tab" data-lens="systems" type="button">Systems Lens</button>
+            <button class="lab-tab" data-lens="story" type="button">Story Lens</button>
+          </div>
+          <div class="lab-content" id="lensContent">
+            <p class="lab-label">Research Lens</p>
+            <h3>How do users behave when confidence is low?</h3>
+            <p>I map hesitation points, trust breakdowns, and the moments where language needs to do as much work as layout.</p>
           </div>
         </div>
-        <p class="screen-label">Quick Replies — Final</p>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <div id="cs-design" class="case-section reveal">
-    <div class="case-section-label">05 — Design</div>
-    <h2 class="case-section-title">Final Design System</h2>
-    <div class="case-body">
-      <p>The final interface uses a soft, warm palette to reduce clinical associations. The chatbot employs progressive disclosure — starting with quick-reply options before opening full text input — to lower the barrier for younger users.</p>
-      <p>Key components: a floating chat widget, education hub with categorised articles, and a community section with peer stories. All designed for mobile-first with WCAG 2.1 AA compliance.</p>
-    </div>
-    <div class="proto-embed">
-      <div class="proto-label">Live Prototype</div>
-      <p style="font-size: 14px; color: var(--ink-mid); margin-bottom: 20px;">Deployed on Vercel — Full conversational UI with AI chatbot</p>
-      <a href="https://lunacare-community.vercel.app/" target="_blank" class="proto-link">Open Live Prototype ↗</a>
-    </div>
-  </div>
-
-  <div id="cs-impact" class="case-section reveal">
-    <div class="case-section-label">06 — Impact</div>
-    <h2 class="case-section-title">Measurable Outcomes</h2>
-    <div class="impact-grid">
-      <div class="impact-item"><div class="impact-num">↓40%</div><div class="impact-label">Cognitive load score in usability testing</div></div>
-      <div class="impact-item"><div class="impact-num">500+</div><div class="impact-label">Chatbot training intents for femcare data</div></div>
-      <div class="impact-item"><div class="impact-num">6</div><div class="impact-label">Key user flows tested across age groups</div></div>
-      <div class="impact-item"><div class="impact-num">3</div><div class="impact-label">Usability testing iterations completed</div></div>
-    </div>
-  </div>
-
-  <div id="cs-reflection" class="case-section reveal">
-    <div class="case-section-label">07 — Reflection</div>
-    <h2 class="case-section-title">What I would do differently</h2>
-    <div class="case-body">
-      <p>LunaCare taught me that designing for sensitive health topics requires an extra layer of empathy at every design decision — from the microcopy in error states to the information hierarchy on landing screens.</p>
-      <p>If I were to iterate further, I would invest more in co-design sessions with users from the younger end of the age range (11–14), as their mental models differ significantly from adult users. I would also explore richer data visualisation for cycle tracking that doesn't reduce health to numbers.</p>
-      <p>The project solidified my interest in HCI at the intersection of health and accessibility — themes I hope to explore further at masters level in Germany.</p>
-    </div>
-    <div style="margin-top: 48px;">
-      <button class="btn-secondary" onclick="showPage('projects')">← All Projects</button>
-    </div>
-  </div>
-
-  <footer>
-    <span>© 2025 Deva Rohan Joel</span>
-    <span>LunaCare — Case Study</span>
-  </footer>
-</div>
-
-<!-- ══════════════ CASE STUDY: FEMCARE ══════════════ -->
-<div id="page-case-femcare" class="page">
-  <div class="case-hero">
-    <button class="case-back" onclick="showPage('projects')">← Back to Projects</button>
-    <div class="case-hero-meta"><span class="tag">UX Research</span><span class="tag">Community Platform</span></div>
-    <h1 class="case-hero-title">FemCare Community 2.0</h1>
-    <p class="case-subtitle">A women's health community platform offering peer support, resources, and empathy-driven digital interactions — built and deployed for users aged 11–40.</p>
-    <div class="case-meta-grid">
-      <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">Nov – Dec 2025</div></div>
-      <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">Lead UX Designer</div></div>
-      <div class="meta-item"><div class="meta-label">Deliverable</div><div class="meta-value">Deployed SPA</div></div>
-      <div class="meta-item"><div class="meta-label">Testing</div><div class="meta-value">Structured Usability Testing</div></div>
-    </div>
-  </div>
-
-  <div class="case-section reveal">
-    <div class="case-section-label">Overview</div>
-    <h2 class="case-section-title">Peer support for underserved conversations</h2>
-    <div class="case-body">
-      <p>FemCare Community 2.0 emerged from the insight that women's health discourse is often siloed — clinical sources lack warmth, peer networks lack accuracy. This project combined both.</p>
-      <p>I led the end-to-end UX process: user journey mapping, information architecture, and empathy-driven interaction design. I also built and deployed the community SPA, iterating on features through structured usability testing.</p>
-    </div>
-  </div>
-
-  <div class="case-section reveal">
-    <div class="case-section-label">Key UX Decisions</div>
-    <h2 class="case-section-title">Design rationale</h2>
-    <ul class="insight-list">
-      <li class="insight-item"><div class="insight-icon">IA</div><div class="insight-text">Flat information architecture — no more than 2 taps to any resource — to serve users with limited digital literacy</div></li>
-      <li class="insight-item"><div class="insight-icon">JM</div><div class="insight-text">User journey mapping identified three primary user archetypes with distinct information needs and access patterns</div></li>
-      <li class="insight-item"><div class="insight-icon">UT</div><div class="insight-text">Three rounds of usability testing with structured feedback protocols informed each design iteration</div></li>
-    </ul>
-  </div>
-
-  <div class="case-section reveal">
-    <div class="case-section-label">Reflection</div>
-    <h2 class="case-section-title">Learning through iteration</h2>
-    <div class="case-body">
-      <p>This project established my usability testing methodology. The discipline of structured feedback rounds — defining tasks, observing without intervening, measuring completion rates — is now central to my design process.</p>
-    </div>
-    <div style="margin-top: 48px;">
-      <button class="btn-secondary" onclick="showPage('projects')">← All Projects</button>
-    </div>
-  </div>
-  <footer><span>© 2025 Deva Rohan Joel</span><span>FemCare — Case Study</span></footer>
-</div>
-
-<!-- ══════════════ CASE STUDY: GRIEVANCE ══════════════ -->
-<div id="page-case-grievance" class="page">
-  <div class="case-hero">
-    <button class="case-back" onclick="showPage('projects')">← Back to Projects</button>
-    <div class="case-hero-meta"><span class="tag">Redesign</span><span class="tag">Civic Tech</span></div>
-    <h1 class="case-hero-title">Grievance Portal Redesign</h1>
-    <p class="case-subtitle">A civic complaint management portal designed to streamline grievance resolution for government stakeholders through end-to-end interaction design.</p>
-    <div class="case-meta-grid">
-      <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">Jul 2024 – Aug 2025</div></div>
-      <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">UX Designer</div></div>
-      <div class="meta-item"><div class="meta-label">Focus</div><div class="meta-value">Accessibility, Multi-device</div></div>
-      <div class="meta-item"><div class="meta-label">Output</div><div class="meta-value">High-fidelity Prototype</div></div>
-    </div>
-  </div>
-
-  <div class="case-section reveal">
-    <div class="case-section-label">Overview</div>
-    <h2 class="case-section-title">Making civic processes human</h2>
-    <div class="case-body">
-      <p>Government grievance systems are often designed from the back-end out — optimised for administrative processing rather than citizen comprehension. This redesign reversed the lens.</p>
-      <p>I developed end-to-end interaction flows, wireframes, and high-fidelity prototypes for the complaint submission pipeline, then conducted multi-device usability testing to refine the interface.</p>
-    </div>
-  </div>
-
-  <div class="case-section reveal">
-    <div class="case-section-label">Key Contributions</div>
-    <h2 class="case-section-title">Design decisions</h2>
-    <ul class="insight-list">
-      <li class="insight-item"><div class="insight-icon">01</div><div class="insight-text">Redesigned the submission flow from a single dense form to a guided multi-step process with clear progress indication</div></li>
-      <li class="insight-item"><div class="insight-icon">02</div><div class="insight-text">Multi-device usability testing revealed 3 critical interaction failures in the original design that were fixed through iteration</div></li>
-      <li class="insight-item"><div class="insight-icon">03</div><div class="insight-text">Accessibility audit identified WCAG violations; all were resolved in the final prototype</div></li>
-    </ul>
-    <div style="margin-top: 48px;">
-      <button class="btn-secondary" onclick="showPage('projects')">← All Projects</button>
-    </div>
-  </div>
-  <footer><span>© 2025 Deva Rohan Joel</span><span>Grievance Portal — Case Study</span></footer>
-</div>
-
-<!-- ══════════════ ABOUT PAGE ══════════════ -->
-<div id="page-about" class="page">
-  <section>
-    <div class="about-grid">
-      <div class="about-photo-block reveal">
-        <div class="about-photo-placeholder">DRJ</div>
-        <div class="about-photo-caption">Deva Rohan Joel · Chennai, India</div>
-      </div>
-      <div>
-        <div class="eyebrow reveal">About</div>
-        <h1 class="hero-name reveal reveal-delay-1" style="font-size: clamp(32px,5vw,56px); margin-bottom: 28px;">Designing with empathy, grounded in research.</h1>
-        <div class="about-body reveal reveal-delay-2">
-          <p>I'm a B.Tech Computer Science student at VIT Bhopal specialising in Human-Computer Interaction and UX Research. My work sits at the intersection of accessible design, user psychology, and emerging interaction paradigms.</p>
-          <p>I'm drawn to problems where the stakes are human: health interfaces, civic systems, educational tools. I believe that good design should be invisible — reducing friction until the technology disappears and only the experience remains.</p>
-          <p>Currently applying to Masters programmes in Germany, where the HCI research tradition is among the strongest in the world. I'm particularly interested in interaction design for healthcare and accessibility-centred design systems.</p>
+      <section class="section evidence">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Evidence Trail</p>
+          <h2>Signals that shape my work.</h2>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top: 0;">
-    <div class="section-header reveal">
-      <h2 class="section-title">Skills</h2>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="skill-group">
-        <div class="skill-group-label">Design & Prototyping</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span><span class="skill-tag">Adobe XD</span><span class="skill-tag">Wireframing</span><span class="skill-tag">Interface Design</span>
+        <div class="evidence-grid">
+          <article class="evidence-card reveal">
+            <span class="evidence-year">2026</span>
+            <h3>Human-centered interfaces for health conversations</h3>
+            <p>Exploring how conversational structures and pacing reduce overload in sensitive topics.</p>
+          </article>
+          <article class="evidence-card reveal reveal-delay-1">
+            <span class="evidence-year">2025</span>
+            <h3>Community architecture with emotional safety in mind</h3>
+            <p>Designing peer-support systems that feel warm, usable, and responsibly structured.</p>
+          </article>
+          <article class="evidence-card reveal reveal-delay-2">
+            <span class="evidence-year">2024</span>
+            <h3>Administrative systems translated into humane digital journeys</h3>
+            <p>Turning rigid flows into stepwise experiences with better comprehension and clearer next actions.</p>
+          </article>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">HCI & UX Methods</div>
-        <div class="skill-tags">
-          <span class="skill-tag">UX Research</span><span class="skill-tag">Usability Testing</span><span class="skill-tag">Journey Mapping</span><span class="skill-tag">IxD</span><span class="skill-tag">IA</span>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-layout">
+          <div class="about-panel reveal">
+            <p class="eyebrow">About</p>
+            <h2>I like designing interfaces that feel emotionally literate.</h2>
+            <p>
+              I am a B.Tech Computer Science student specializing in Human-Computer Interaction and UX Research at VIT Bhopal.
+              I am especially drawn to healthcare, civic systems, and education because these are spaces where poor UX creates real stress.
+            </p>
+            <p>
+              My long-term direction is research-led design systems and interaction design for accessibility-forward products.
+            </p>
+          </div>
+          <div class="about-stack reveal reveal-delay-1">
+            <div class="about-card">
+              <p class="about-card-label">Toolset</p>
+              <p>Figma, UX research, journey mapping, HTML, CSS, JavaScript, prototyping, testing.</p>
+            </div>
+            <div class="about-card">
+              <p class="about-card-label">Languages</p>
+              <p>Tamil, Hindi, English, and beginner German.</p>
+            </div>
+            <div class="about-card">
+              <p class="about-card-label">Current Goal</p>
+              <p>Build a stronger HCI case-study portfolio for masters applications in Germany.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Frontend & Development</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Python</span><span class="skill-tag">Flask</span><span class="skill-tag">Streamlit</span>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>If your project needs more clarity and less friction, let’s talk.</h2>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:rohanojoel33@gmail.com">rohanojoel33@gmail.com</a>
+            <a href="https://linkedin.com/in/rohan-joel-8a8219340" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span>Chennai, India</span>
+          </div>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Geospatial & Data</div>
-        <div class="skill-tags">
-          <span class="skill-tag">GIS</span><span class="skill-tag">Remote Sensing</span><span class="skill-tag">Data Visualisation</span><span class="skill-tag">Spatial Analysis</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <section style="padding-top: 0;">
-    <div class="section-header reveal">
-      <h2 class="section-title">Languages</h2>
-    </div>
-    <div class="reveal">
-      <div class="lang-row">
-        <div class="lang-name">Tamil</div>
-        <div class="lang-level">Native</div>
-        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
-      </div>
-      <div class="lang-row">
-        <div class="lang-name">Hindi</div>
-        <div class="lang-level">Native</div>
-        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
-      </div>
-      <div class="lang-row">
-        <div class="lang-name">English</div>
-        <div class="lang-level">Proficient</div>
-        <div class="lang-bar"><div class="lang-fill" style="width:85%"></div></div>
-      </div>
-      <div class="lang-row">
-        <div class="lang-name">German</div>
-        <div class="lang-level">Beginner</div>
-        <div class="lang-bar"><div class="lang-fill" style="width:15%"></div></div>
-      </div>
-    </div>
-  </section>
+    <footer class="site-footer">
+      <span>Deva Rohan Joel</span>
+      <span>HCI & UX Research Portfolio</span>
+      <span>2026</span>
+    </footer>
+  </div>
 
-  <footer><span>© 2025 Deva Rohan Joel</span><span>HCI & UX Research Portfolio</span></footer>
-</div>
-
-<!-- ══════════════ RESUME PAGE ══════════════ -->
-<div id="page-resume" class="page">
-  <section>
-    <div class="resume-header reveal">
-      <div>
-        <h1 class="resume-name">Deva Rohan Joel</h1>
-        <p class="resume-tagline">HCI & UX Research Candidate</p>
-        <div class="resume-contact">
-          <span>rohanojoel33@gmail.com</span>
-          <span>+91 98436 68923</span>
-          <span>Chennai, India</span>
-          <span>linkedin.com/in/rohan-joel-8a8219340</span>
-        </div>
-      </div>
-      <button class="btn-primary" onclick="window.print()">Download PDF ↓</button>
-    </div>
-
-    <div class="resume-section reveal">
-      <div class="resume-section-title">Summary</div>
-      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;">B.Tech Computer Science student specialising in Human-Computer Interaction (HCI) and UX Research. Experienced in user-centred design, usability testing, and accessibility-focused interaction design, with hands-on GIS project work. Passionate about building inclusive, empathy-driven digital experiences for diverse users.</p>
-    </div>
-
-    <div class="resume-section reveal">
-      <div class="resume-section-title">Experience</div>
-      <div class="resume-entry">
+  <div class="case-modal" id="caseModal" aria-hidden="true">
+    <div class="case-backdrop" data-close-modal="true"></div>
+    <div class="case-panel" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+      <button class="case-close" id="closeCase" type="button" aria-label="Close case note">Close</button>
+      <p class="case-kicker" id="caseKicker"></p>
+      <h2 id="caseTitle"></h2>
+      <p class="case-summary" id="caseSummary"></p>
+      <div class="case-columns">
         <div>
-          <div class="entry-title">Trainee</div>
-          <div class="entry-org">India Space Lab — New Delhi, India</div>
-          <ul class="entry-bullets">
-            <li>Executed two GIS-driven design projects: Site Suitability Analysis (Vector GIS) and Service Area Analysis of Police Stations</li>
-            <li>Applied spatial data visualisation and data-driven design thinking to real-world scenarios</li>
-            <li>Trained in remote sensing, satellite systems, and disaster management workflows</li>
-          </ul>
+          <p class="case-label">Role</p>
+          <p id="caseRole"></p>
         </div>
-        <div class="entry-date">Feb – Mar 2026</div>
-      </div>
-    </div>
-
-    <div class="resume-section reveal">
-      <div class="resume-section-title">Education</div>
-      <div class="resume-entry">
         <div>
-          <div class="entry-title">B.Tech — Computer Science & Engineering</div>
-          <div class="entry-org">VIT Bhopal University</div>
-          <div class="entry-desc">Specialisation in Human-Computer Interaction and UX Research</div>
+          <p class="case-label">Outcome</p>
+          <p id="caseOutcome"></p>
         </div>
-        <div class="entry-date">Sep 2022 – Sep 2026</div>
       </div>
-      <div class="resume-entry">
-        <div>
-          <div class="entry-title">Class XII — CBSE</div>
-          <div class="entry-org">Navy Children's School, Port Blair</div>
-        </div>
-        <div class="entry-date">Apr 2021 – Jul 2022</div>
-      </div>
+      <div class="case-notes" id="caseNotes"></div>
     </div>
+  </div>
 
-    <div class="resume-section reveal">
-      <div class="resume-section-title">Projects</div>
-      <div class="resume-entry">
-        <div>
-          <div class="entry-title">LunaCare — Health Community</div>
-          <div class="entry-org">Conversational Interface · Deployed</div>
-          <ul class="entry-bullets">
-            <li>Prototyped a conversational UI for menstrual health guidance, reducing cognitive load through progressive disclosure</li>
-            <li>Applied HCI theory to address health interaction challenges and accessibility concerns</li>
-          </ul>
-        </div>
-        <div class="entry-date">Feb – Mar 2026</div>
-      </div>
-      <div class="resume-entry">
-        <div>
-          <div class="entry-title">FemCare Community 2.0</div>
-          <div class="entry-org">Women's Health SPA · Deployed</div>
-          <ul class="entry-bullets">
-            <li>Led end-to-end UX process: user journey mapping, information architecture, and empathy-driven interaction design</li>
-            <li>Built and deployed a community SPA for users aged 11–40, iterating on features through structured usability testing</li>
-          </ul>
-        </div>
-        <div class="entry-date">Nov – Dec 2025</div>
-      </div>
-      <div class="resume-entry">
-        <div>
-          <div class="entry-title">Grievance Portal</div>
-          <div class="entry-org">Civic Complaint Management</div>
-          <ul class="entry-bullets">
-            <li>Developed end-to-end interaction flows, wireframes, and high-fidelity prototypes for the complaint submission pipeline</li>
-            <li>Conducted multi-device usability testing and incorporated structured user feedback to refine the interface</li>
-          </ul>
-        </div>
-        <div class="entry-date">Jul 2024 – Aug 2025</div>
-      </div>
-    </div>
-
-    <div class="resume-section reveal">
-      <div class="resume-section-title">Certifications</div>
-      <div class="resume-entry">
-        <div><div class="entry-title">Foundations of UX Design</div><div class="entry-org">Google / Coursera</div></div>
-        <div class="entry-date">Dec 2024</div>
-      </div>
-      <div class="resume-entry">
-        <div><div class="entry-title">Generative AI</div><div class="entry-org">IBM</div></div>
-        <div class="entry-date">Apr 2025</div>
-      </div>
-      <div class="resume-entry">
-        <div><div class="entry-title">IBM Cybersecurity Analyst</div><div class="entry-org">IBM</div></div>
-        <div class="entry-date">Apr 2025</div>
-      </div>
-      <div class="resume-entry">
-        <div><div class="entry-title">Marketing Analytics</div><div class="entry-org">IIT (NPTEL)</div></div>
-        <div class="entry-date">Jan – Apr 2025</div>
-      </div>
-    </div>
-  </section>
-  <footer><span>© 2025 Deva Rohan Joel</span><span>Curriculum Vitae</span></footer>
-</div>
-
-<!-- ══════════════ CONTACT PAGE ══════════════ -->
-<div id="page-contact" class="page">
-  <section>
-    <div class="contact-grid">
-      <div>
-        <div class="eyebrow reveal">Contact</div>
-        <h1 class="contact-headline reveal reveal-delay-1">Let's talk HCI.</h1>
-        <p class="contact-body reveal reveal-delay-2">I'm currently applying to Masters programmes in HCI at German universities and open to conversations about research, design, or collaboration. Drop me a message — I respond within 24 hours.</p>
-
-        <div class="contact-links reveal reveal-delay-3">
-          <a href="mailto:rohanojoel33@gmail.com" class="contact-link-item">
-            <span class="contact-link-label">Email</span>
-            <span class="contact-link-value">rohanojoel33@gmail.com</span>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-          <a href="https://linkedin.com/in/rohan-joel-8a8219340" target="_blank" class="contact-link-item">
-            <span class="contact-link-label">LinkedIn</span>
-            <span class="contact-link-value">rohan-joel-8a8219340</span>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-          <div class="contact-link-item">
-            <span class="contact-link-label">Phone</span>
-            <span class="contact-link-value">+91 98436 68923</span>
-          </div>
-          <div class="contact-link-item">
-            <span class="contact-link-label">Location</span>
-            <span class="contact-link-value">Chennai, India</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-2">
-        <div class="contact-form">
-          <div class="form-group">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-input" placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Institution / Context</label>
-            <input type="text" class="form-input" placeholder="e.g. TU Berlin, Admissions">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell me about your programme, research interests, or collaboration idea..."></textarea>
-          </div>
-          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="handleContact()">Send Message →</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer><span>© 2025 Deva Rohan Joel</span><span>HCI & UX Research Portfolio</span></footer>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
