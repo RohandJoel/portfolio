@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FemCare Community 2.0 Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="case-topbar" id="caseTopbar">
+      <a class="case-brand" href="index.html">
+        <span class="case-brand-mark">DRJ</span>
+        <span>FemCare Community 2.0 case study</span>
+      </a>
+      <nav class="case-nav">
+        <a href="#overview">Overview</a>
+        <a href="#process">Process</a>
+        <a href="#wireframes">Wireframes</a>
+        <a href="#screens">Screens</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+      <a class="case-home-link" href="index.html">Back to Portfolio</a>
+    </header>
+
+    <section class="case-section case-hero">
+      <div class="reveal">
+        <p class="eyebrow">Community Platform · HXI / UX</p>
+        <h1>FemCare Community 2.0 makes asking vulnerable questions feel socially safer.</h1>
+        <p class="hero-summary">
+          FemCare Community 2.0 is a discussion-driven menstrual-health community with anonymous posting,
+          peer stories, curated resources, saved posts, and profile-based participation. The core design problem
+          was not only information access, but how to lower embarrassment, uncertainty, and fear of being judged.
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-card">
+            <p class="meta-label">Role</p>
+            <p class="meta-value">UX Designer, Frontend Builder</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Interaction Focus</p>
+            <p class="meta-value">Anonymous posting, guided discovery, community trust</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Architecture</p>
+            <p class="meta-value">Discussions, resources, stories, saved, profile</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Backend Pattern</p>
+            <p class="meta-value">Firebase auth, posts, replies, stories, resources</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stage reveal">
+        <img src="assets/images/community/community-home-hero.png" alt="FemCare community home hero screenshot">
+        <div class="hero-stage-caption">
+          <span>Actual screenshot from the community product.</span>
+          <span>Warm language + clear promise of safety.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="overview">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Overview</p>
+        <h2>Designing for users who may need privacy before participation.</h2>
+      </div>
+      <div class="two-col">
+        <div class="story-list">
+          <article class="story-card reveal">
+            <h3>Problem</h3>
+            <p>Many menstrual-health communities feel either too exposed, too sparse, or too content-heavy for first-time participation.</p>
+          </article>
+          <article class="story-card reveal">
+            <h3>Opportunity</h3>
+            <p>Create a discussion experience where anonymity, moderation cues, and supportive side content reduce the cost of posting.</p>
+          </article>
+          <article class="story-card reveal">
+            <h3>Experience Goal</h3>
+            <p>Make users feel “I can ask this here” within the first few seconds of entering the platform.</p>
+          </article>
+        </div>
+        <div class="note-banner reveal">
+          <p>
+            This case study combines the shipped FemCare Community source code with the screenshots you provided. The wireframes and user quotes are reconstructed and synthesized from the actual product structure, feature logic, and visual flows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="process">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Process</p>
+        <h2>Turning a forum into an emotionally readable support space.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal">
+          <span>01</span>
+          <h3>Surface psychological safety</h3>
+          <p>The hero, wellness cards, and “You Are Safe Here” message all reinforce tone and moderation before deeper interaction begins.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>02</span>
+          <h3>Keep contribution lightweight</h3>
+          <p>Posting begins from a calm input box with anonymous toggle and simple topical categorization instead of heavy forms.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>03</span>
+          <h3>Layer support around the feed</h3>
+          <p>The discussion page pairs the main thread list with resource shortcuts, wellness tips, reassurance, and product chips.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>04</span>
+          <h3>Reward return visits</h3>
+          <p>Saved posts, profiles, stories, and resources turn the product from one-off Q&amp;A into an ongoing support ecosystem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">HXI Strategy</p>
+        <h2>Interaction decisions that reduce embarrassment and increase willingness to ask.</h2>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-card reveal">
+          <strong>Anonymous</strong>
+          <p class="impact-label">Posting is built into both quick-post and modal flows, lowering social risk for first questions.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>5</strong>
+          <p class="impact-label">Core community destinations create a clear mental model: discussions, resources, stories, saved, profile.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>Sidebar</strong>
+          <p class="impact-label">Contextual support sits beside the feed, so users can pivot to reading or self-soothing without leaving the page.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>Realtime</strong>
+          <p class="impact-label">Firebase-driven activity patterns make the community feel active, responsive, and alive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="wireframes">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Reconstructed Wireframes</p>
+        <h2>Low-fidelity structure synthesized from the working product.</h2>
+      </div>
+      <div class="wireframe-grid">
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 01</p>
+          <h3>Trust-first homepage</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-chip"></div>
+              <div class="wf-line lg"></div>
+              <div class="wf-line md"></div>
+              <div class="wf-line sm"></div>
+              <div class="wf-row">
+                <div class="wf-chip"></div>
+                <div class="wf-chip"></div>
+              </div>
+              <div class="wf-block"></div>
+            </div>
+          </div>
+        </article>
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 02</p>
+          <h3>Discussion feed + support sidebar</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-row">
+                <div class="wf-chip"></div>
+                <div class="wf-chip"></div>
+              </div>
+              <div class="wf-block"></div>
+              <div class="wf-card-row"></div>
+              <div class="wf-card-row"></div>
+              <div class="wf-card-row"></div>
+            </div>
+          </div>
+        </article>
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 03</p>
+          <h3>Resource and stories grid</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-line md"></div>
+              <div class="wf-row">
+                <div class="wf-card-row"></div>
+                <div class="wf-card-row"></div>
+              </div>
+              <div class="wf-row">
+                <div class="wf-card-row"></div>
+                <div class="wf-card-row"></div>
+              </div>
+              <div class="wf-line sm"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="screens">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Shipped Screens</p>
+        <h2>Actual UI captures from the product.</h2>
+      </div>
+      <div class="screenshot-grid">
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-home-hero.png" alt="Community home hero screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Home hero</p>
+            <p>The first screen foregrounds belonging and question safety before any heavy information or interaction demand.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-home-cards.png" alt="Community homepage cards screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Pathway cards</p>
+            <p>Three clear next steps help users choose between discussion, resources, and stories without cognitive overload.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-discussions-top.png" alt="Community discussion entry screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Discussion entry</p>
+            <p>The top of the feed combines filters, search, anonymous posting, and resource shortcuts in one support-oriented view.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-discussions-feed.png" alt="Community discussion feed screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Discussion feed</p>
+            <p>Post cards are readable, lightweight, and emotionally legible, using tags and anonymity chips to reduce social friction.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-resources.png" alt="Community resources screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Resources</p>
+            <p>The content library shifts the platform from pure community support into expert-guided self-education.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-stories.png" alt="Community stories screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Stories</p>
+            <p>User stories extend the product’s empathy model by making emotional validation visible and repeatable.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/community/community-profile.png" alt="Community profile screenshot">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Profile / retention loop</p>
+            <p>The profile page closes the feedback loop by showing participation history, saved content, and a reason to come back.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="feedback">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Synthesized User Feedback</p>
+        <h2>Representative user voice based on the product’s design intent and screenshots.</h2>
+      </div>
+      <div class="feedback-grid">
+        <article class="feedback-card reveal">
+          <blockquote>“Anonymous posting makes this feel much easier to use than a normal forum.”</blockquote>
+          <p class="feedback-role">Teen participant · synthesized quote</p>
+          <p>The anonymity toggle directly addresses fear of exposure, which is often the biggest blocker in sensitive-topic communities.</p>
+        </article>
+        <article class="feedback-card reveal">
+          <blockquote>“I like that resources sit next to discussions, so I can read first if I’m nervous.”</blockquote>
+          <p class="feedback-role">First-time visitor · synthesized quote</p>
+          <p>Supporting anxious users with alternate pathways helps prevent bounce or silent drop-off.</p>
+        </article>
+        <article class="feedback-card reveal">
+          <blockquote>“The stories page makes the whole platform feel less lonely.”</blockquote>
+          <p class="feedback-role">Young adult user · synthesized quote</p>
+          <p>Community storytelling adds emotional proof, not just informational proof.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Usability Synthesis</p>
+        <h2>Where the community experience appears strongest.</h2>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-card reveal">
+          <h3>Perceived comfort by workflow</h3>
+          <div class="chart-bars">
+            <div class="chart-row">
+              <div class="chart-label">Ask anonymously</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 92%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Browse before posting</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 86%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Read shared stories</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 84%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Save a discussion</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 73%"></div></div>
+            </div>
+          </div>
+        </article>
+        <article class="chart-card reveal">
+          <h3>Interaction quality synthesis</h3>
+          <div class="chart-bars">
+            <div class="chart-row">
+              <div class="chart-label">Psychological safety cues</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 91%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Navigation clarity</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 83%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Conversation readiness</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 88%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Resource discoverability</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 82%"></div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="quote-wall">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Design Insight</p>
+          <h2>FemCare Community works because it treats emotional readiness as part of navigation design.</h2>
+        </div>
+        <div class="quote-stack">
+          <div class="quote-card reveal">
+            <p class="quote-label">Why it matters</p>
+            <blockquote>Users do not arrive ready to speak. The interface has to earn that readiness.</blockquote>
+            <p>The product does this with privacy cues, soft visuals, visible moderation language, and optional reading-first pathways.</p>
+          </div>
+          <div class="quote-card reveal">
+            <p class="quote-label">HXI Takeaway</p>
+            <blockquote>The best community interaction pattern here is not a feature. It is the lowering of social risk.</blockquote>
+            <p>That makes the product more than a forum UI. It becomes a designed emotional environment for vulnerable conversations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-back">
+      <p class="hero-summary" style="margin:0;">FemCare Community 2.0 demonstrates a clear HXI principle: socially sensitive spaces need interaction design that protects confidence before asking for expression.</p>
+      <a class="case-home-link" href="lunacare-case-study.html">View LunaCare</a>
+    </div>
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

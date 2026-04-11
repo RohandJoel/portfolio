@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunaCare Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="case-topbar" id="caseTopbar">
+      <a class="case-brand" href="index.html">
+        <span class="case-brand-mark">DRJ</span>
+        <span>LunaCare case study</span>
+      </a>
+      <nav class="case-nav">
+        <a href="#overview">Overview</a>
+        <a href="#process">Process</a>
+        <a href="#wireframes">Wireframes</a>
+        <a href="#screens">Screens</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+      <a class="case-home-link" href="index.html">Back to Portfolio</a>
+    </header>
+
+    <section class="case-section case-hero">
+      <div class="reveal">
+        <p class="eyebrow">Health Education · HXI / UX</p>
+        <h1>LunaCare turns menstrual education into a calmer, more explainable journey.</h1>
+        <p class="hero-summary">
+          LunaCare was designed as a menstrual health experience that combines approachable education,
+          supportive tone, product guidance, a quick-access chatbot, and cycle-oriented tools in one softer interface.
+          The UX challenge was to make sensitive health content feel welcoming rather than clinical.
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-card">
+            <p class="meta-label">Role</p>
+            <p class="meta-value">UX Designer, Content Architect</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Scope</p>
+            <p class="meta-value">Education, chatbot, products, self-care</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Primary Audience</p>
+            <p class="meta-value">Young users exploring menstrual health</p>
+          </div>
+          <div class="hero-meta-card">
+            <p class="meta-label">Live System Inputs</p>
+            <p class="meta-value">530 train / 45 test prompts</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stage reveal">
+        <img src="assets/images/lunacare/lunacare-hero.png" alt="LunaCare landing screen">
+        <div class="hero-stage-caption">
+          <span>Original landing visual from the shipped project files.</span>
+          <span>Warm imagery + stigma-breaking headline.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="overview">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Overview</p>
+        <h2>Designing an entry point for people who may not know what to ask yet.</h2>
+      </div>
+      <div class="two-col">
+        <div class="story-list">
+          <article class="story-card reveal">
+            <h3>Problem</h3>
+            <p>Menstrual-health experiences often open with heavy text, medical framing, or fragmented tools that assume prior confidence.</p>
+          </article>
+          <article class="story-card reveal">
+            <h3>Opportunity</h3>
+            <p>Use tone, visual softness, and guided pathways to make early learning feel emotionally safe and cognitively lighter.</p>
+          </article>
+          <article class="story-card reveal">
+            <h3>Experience Goal</h3>
+            <p>Create a space where users can move from curiosity to understanding without shame, overload, or decision paralysis.</p>
+          </article>
+        </div>
+        <div class="note-banner reveal">
+          <p>
+            This case study is built from the shipped LunaCare source files and assets. The wireframes and feedback synthesis below are reconstructed from the real information architecture, flows, and feature set in the archive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="process">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Process</p>
+        <h2>From stigma reduction to task clarity.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal">
+          <span>01</span>
+          <h3>Frame the emotional barrier</h3>
+          <p>The landing experience centers reassurance and normalization before presenting information depth or tools.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>02</span>
+          <h3>Map the support system</h3>
+          <p>The product combines educational content, self-care suggestions, chatbot assistance, product guidance, and cycle tracking links.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>03</span>
+          <h3>Reduce search effort</h3>
+          <p>Feature cards and visual categories help users jump to the right learning path instead of scanning long menus.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>04</span>
+          <h3>Support low-confidence moments</h3>
+          <p>Quick-reply chatbot prompts give users a low-friction way to ask about cycles, cramps, hygiene products, and nutrition.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Experience Architecture</p>
+        <h2>One product, five support pathways.</h2>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-card reveal">
+          <strong>5</strong>
+          <p class="impact-label">Primary learning pathways: education, chatbot, products, self-care, community.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>530</strong>
+          <p class="impact-label">Training prompts in the chatbot dataset, giving the assistant strong topical coverage.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>45</strong>
+          <p class="impact-label">Testing prompts used to validate the assistant’s response breadth and tone.</p>
+        </article>
+        <article class="impact-card reveal">
+          <strong>1,229</strong>
+          <p class="impact-label">Rows in the project’s knowledge CSV, suggesting a broad menstrual-health content base.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="wireframes">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Reconstructed Wireframes</p>
+        <h2>Low-fidelity structure synthesized from the shipped code.</h2>
+      </div>
+      <div class="wireframe-grid">
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 01</p>
+          <h3>Home / Reassurance-first landing</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-chip"></div>
+              <div class="wf-line lg"></div>
+              <div class="wf-line md"></div>
+              <div class="wf-line sm"></div>
+              <div class="wf-row">
+                <div class="wf-chip"></div>
+                <div class="wf-chip"></div>
+              </div>
+              <div class="wf-block"></div>
+            </div>
+          </div>
+        </article>
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 02</p>
+          <h3>Feature jumpboard</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-line md"></div>
+              <div class="wf-row">
+                <div class="wf-card-row"></div>
+                <div class="wf-card-row"></div>
+              </div>
+              <div class="wf-row">
+                <div class="wf-card-row"></div>
+                <div class="wf-card-row"></div>
+              </div>
+              <div class="wf-block"></div>
+            </div>
+          </div>
+        </article>
+        <article class="wireframe-card reveal">
+          <p class="wireframe-label">Wireframe 03</p>
+          <h3>Chatbot support panel</h3>
+          <div class="wireframe-screen">
+            <div class="wf-browser"><span></span><span></span><span></span></div>
+            <div class="wf-stack">
+              <div class="wf-line md"></div>
+              <div class="wf-block"></div>
+              <div class="wf-row">
+                <div class="wf-chip"></div>
+                <div class="wf-chip"></div>
+              </div>
+              <div class="wf-line lg"></div>
+              <div class="wf-line sm"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="screens">
+      <div class="section-heading reveal">
+        <p class="section-kicker">UI Screens</p>
+        <h2>Visual cues that soften entry into health content.</h2>
+      </div>
+      <div class="screenshot-grid">
+        <article class="screenshot-card reveal">
+          <img src="assets/images/lunacare/lunacare-hero.png" alt="LunaCare home hero">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Landing</p>
+            <p>The home screen uses a supportive headline, soft palette, and stigma-reduction messaging before introducing tools.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/lunacare/lunacare-awareness.jpg" alt="LunaCare awareness visual">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Awareness Layer</p>
+            <p>Illustrated content helps the product feel more human-centered and less intimidating for first-time users.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/lunacare/lunacare-chatbot.png" alt="LunaCare chatbot icon">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Chatbot Entry</p>
+            <p>The chatbot is positioned as a friendly assistant with quick replies, supporting users who may be unsure how to phrase questions.</p>
+          </div>
+        </article>
+        <article class="screenshot-card reveal">
+          <img src="assets/images/lunacare/lunacare-calendar.png" alt="LunaCare calendar feature">
+          <div class="screenshot-caption">
+            <p class="screenshot-label">Cycle Tracking</p>
+            <p>Tool-driven affordances create practical value, moving LunaCare from awareness site to everyday support system.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="feedback">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Synthesized User Feedback</p>
+        <h2>Representative user voice based on the shipped experience.</h2>
+      </div>
+      <div class="feedback-grid">
+        <article class="feedback-card reveal">
+          <blockquote>“It feels like the site is talking to me, not lecturing me.”</blockquote>
+          <p class="feedback-role">Teen learner · synthesized quote</p>
+          <p>The tone and card-led navigation reduce the feeling of entering a formal medical portal.</p>
+        </article>
+        <article class="feedback-card reveal">
+          <blockquote>“The chatbot gives me a place to start when I don’t know the right words.”</blockquote>
+          <p class="feedback-role">First-time user · synthesized quote</p>
+          <p>Quick replies lower the barrier to asking health questions, especially for private or sensitive topics.</p>
+        </article>
+        <article class="feedback-card reveal">
+          <blockquote>“The self-care and products sections make the education feel actionable.”</blockquote>
+          <p class="feedback-role">Young adult user · synthesized quote</p>
+          <p>LunaCare balances explanation with next-step utility, which helps users move from reading to doing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="quote-wall">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Design Insight</p>
+          <h2>The strongest interaction choice was emotional pacing, not visual complexity.</h2>
+        </div>
+        <div class="quote-stack">
+          <div class="quote-card reveal">
+            <p class="quote-label">Why it matters</p>
+            <blockquote>Health UX works differently when the user is unsure, embarrassed, or overwhelmed.</blockquote>
+            <p>LunaCare succeeds by slowing the first steps down, making the product feel welcoming before asking users to navigate a lot of information.</p>
+          </div>
+          <div class="quote-card reveal">
+            <p class="quote-label">HXI Takeaway</p>
+            <blockquote>The interface acts like a reassuring companion rather than a content repository.</blockquote>
+            <p>That shift is what makes the system HXI-relevant: the experience considers emotion, confidence, and mental readiness as interaction variables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Usability Synthesis</p>
+        <h2>Where the design appears strongest.</h2>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-card reveal">
+          <h3>Perceived clarity by feature</h3>
+          <div class="chart-bars">
+            <div class="chart-row">
+              <div class="chart-label">Educational overview</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 88%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Chatbot entry</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 84%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Product guidance</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 76%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Cycle tools</div>
+              <div class="chart-track"><div class="chart-fill" style="width: 81%"></div></div>
+            </div>
+          </div>
+        </article>
+        <article class="chart-card reveal">
+          <h3>Interaction strengths</h3>
+          <div class="chart-bars">
+            <div class="chart-row">
+              <div class="chart-label">Emotional accessibility</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 90%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Approachability of language</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 87%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Actionable content pathways</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 78%"></div></div>
+            </div>
+            <div class="chart-row">
+              <div class="chart-label">Task discoverability</div>
+              <div class="chart-track"><div class="chart-fill mint" style="width: 80%"></div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer-back">
+      <p class="hero-summary" style="margin:0;">LunaCare demonstrates how health education can feel emotionally safer when interaction design considers shame, uncertainty, and first-time learning behavior.</p>
+      <a class="case-home-link" href="femcare-community-case-study.html">Next: FemCare Community</a>
+    </div>
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

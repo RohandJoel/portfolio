@@ -4,6 +4,7 @@ const projectData = {
     title: "LunaCare",
     body: "A menstrual wellness experience that reduces cognitive load with guided interaction and soft-friction onboarding.",
     role: "UX Designer & Researcher",
+    link: "lunacare-case-study.html",
     outcome: "Built a calmer path into sensitive health information with progressive disclosure and clearer conversation prompts.",
     notes: [
       {
@@ -25,6 +26,7 @@ const projectData = {
     title: "FemCare 2.0",
     body: "A peer-support platform reworked around emotional safety, resource clarity, and navigational simplicity.",
     role: "Lead UX Designer",
+    link: "femcare-community-case-study.html",
     outcome: "Restructured the platform so support, education, and participation felt easier to trust and easier to find.",
     notes: [
       {
@@ -46,6 +48,7 @@ const projectData = {
     title: "Grievance Portal",
     body: "A dense government workflow translated into a clearer, step-led, accessible complaint journey.",
     role: "UX Designer",
+    link: "",
     outcome: "Turned a complex process into a more legible flow with clearer progress, better sequencing, and stronger accessibility.",
     notes: [
       {
@@ -94,7 +97,10 @@ function setActiveProject(projectKey) {
   document.getElementById("previewTitle").textContent = data.title;
   document.getElementById("previewBody").textContent = data.body;
   document.getElementById("previewRole").textContent = data.role;
-  document.getElementById("openProject").dataset.project = projectKey;
+  const openProject = document.getElementById("openProject");
+  openProject.dataset.project = projectKey;
+  openProject.setAttribute("href", data.link || "#");
+  openProject.textContent = data.link ? "Read Case Study" : "Open Case Note";
 }
 
 function buildCaseNotes(notes) {
@@ -263,7 +269,11 @@ function setupEvents() {
   });
 
   document.getElementById("openProject").addEventListener("click", (event) => {
-    openCase(event.currentTarget.dataset.project || "lunacare");
+    const projectKey = event.currentTarget.dataset.project || "lunacare";
+    const data = projectData[projectKey];
+    if (data?.link) return;
+    event.preventDefault();
+    openCase(projectKey);
   });
 
   document.getElementById("closeCase").addEventListener("click", closeCase);
