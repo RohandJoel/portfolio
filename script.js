@@ -2,67 +2,51 @@ const projectData = {
   lunacare: {
     kicker: "Health · Conversational UX",
     title: "LunaCare",
-    body: "A menstrual wellness experience that reduces cognitive load with guided interaction and soft-friction onboarding.",
+    body: "A calm menstrual health website with learning, tools, and support.",
     role: "UX Designer & Researcher",
     link: "lunacare-case-study.html",
-    outcome: "Built a calmer path into sensitive health information with progressive disclosure and clearer conversation prompts.",
+    visuals: [
+      "assets/images/lunacare/lunacare-hero.png",
+      "assets/images/lunacare/lunacare-chatbot.png",
+      "assets/images/lunacare/lunacare-calendar.png"
+    ],
+    outcome: "Clear learning paths, softer visuals, and easier access to help.",
     notes: [
-      {
-        title: "Problem",
-        copy: "Many health apps become clinical too early. LunaCare was framed to feel supportive before it felt technical."
-      },
-      {
-        title: "Design Move",
-        copy: "I prioritized guided choices, paced education blocks, and softer language patterns to reduce user hesitation."
-      },
-      {
-        title: "Result",
-        copy: "The experience became easier to enter, especially for younger users who found existing products intimidating."
-      }
+      { title: "Goal", copy: "Make menstrual health feel easier to learn and less scary to explore." },
+      { title: "UX Move", copy: "Use simple paths, visual warmth, and quick support options." },
+      { title: "Result", copy: "The product feels calmer and easier to enter." }
     ]
   },
   femcare: {
     kicker: "Community · Service Design",
     title: "FemCare 2.0",
-    body: "A peer-support platform reworked around emotional safety, resource clarity, and navigational simplicity.",
+    body: "A safer community space for asking, reading, saving, and sharing.",
     role: "Lead UX Designer",
     link: "femcare-community-case-study.html",
-    outcome: "Restructured the platform so support, education, and participation felt easier to trust and easier to find.",
+    visuals: [
+      "assets/images/community/community-home-hero.png",
+      "assets/images/community/community-discussions-top.png",
+      "assets/images/community/community-resources.png"
+    ],
+    outcome: "A warmer and simpler community experience with lower social pressure.",
     notes: [
-      {
-        title: "Problem",
-        copy: "The community experience needed more than content. It needed a safer emotional rhythm and clearer navigation."
-      },
-      {
-        title: "Design Move",
-        copy: "I reworked the IA, simplified primary journeys, and designed the interface around reassurance rather than density."
-      },
-      {
-        title: "Result",
-        copy: "The platform felt more navigable and more human, with less friction between curiosity and action."
-      }
+      { title: "Goal", copy: "Help users ask personal questions with less fear." },
+      { title: "UX Move", copy: "Add anonymous posting, clear categories, and side support content." },
+      { title: "Result", copy: "The platform feels safer, clearer, and easier to use." }
     ]
   },
   grievance: {
     kicker: "Civic Tech · Redesign",
     title: "Grievance Portal",
-    body: "A dense government workflow translated into a clearer, step-led, accessible complaint journey.",
+    body: "A service flow redesign that made a hard process easier to understand.",
     role: "UX Designer",
     link: "",
-    outcome: "Turned a complex process into a more legible flow with clearer progress, better sequencing, and stronger accessibility.",
+    visuals: [],
+    outcome: "A complex admin flow became easier to follow.",
     notes: [
-      {
-        title: "Problem",
-        copy: "The original grievance flow was admin-first, not citizen-first. Users had to decode process logic on their own."
-      },
-      {
-        title: "Design Move",
-        copy: "I converted the flow into stepwise chunks, added progress context, and reduced the amount of uncertainty on each screen."
-      },
-      {
-        title: "Result",
-        copy: "The redesigned journey felt less punishing and more understandable across devices and user skill levels."
-      }
+      { title: "Goal", copy: "Make a hard public-service flow easier to understand." },
+      { title: "UX Move", copy: "Break the journey into smaller, clearer steps." },
+      { title: "Result", copy: "Users can move through the process with less confusion." }
     ]
   }
 };
@@ -70,18 +54,18 @@ const projectData = {
 const lensData = {
   research: {
     label: "Research Lens",
-    title: "How do users behave when confidence is low?",
-    copy: "I map hesitation points, trust breakdowns, and the moments where language needs to do as much work as layout."
+    title: "What does the user feel here?",
+    copy: "I look for fear, doubt, trust, and mental effort."
   },
   systems: {
     label: "Systems Lens",
-    title: "What happens when a service is structurally overwhelming?",
-    copy: "I turn dense ecosystems into navigable layers, using sequence, visibility, and component logic to keep users oriented."
+    title: "How can the flow be simpler?",
+    copy: "I break big systems into smaller and clearer steps."
   },
   story: {
     label: "Story Lens",
-    title: "What should the interface make people feel before it asks them to act?",
-    copy: "I use interaction pacing, visual warmth, and microcopy to shape trust before asking for effort or disclosure."
+    title: "How can the product feel more human?",
+    copy: "I use tone, pacing, and visuals to make the experience feel safe and easy."
   }
 };
 
@@ -97,6 +81,17 @@ function setActiveProject(projectKey) {
   document.getElementById("previewTitle").textContent = data.title;
   document.getElementById("previewBody").textContent = data.body;
   document.getElementById("previewRole").textContent = data.role;
+
+  const previewPanels = document.querySelectorAll("#previewPanels div");
+  previewPanels.forEach((panel, index) => {
+    const visual = data.visuals?.[index];
+    panel.style.backgroundImage = visual
+      ? `linear-gradient(140deg, rgba(24, 21, 18, 0.06), rgba(24, 21, 18, 0.02)), url("${visual}")`
+      : "linear-gradient(140deg, rgba(24, 21, 18, 0.06), rgba(24, 21, 18, 0.01)), var(--surface)";
+    panel.style.backgroundSize = visual ? "cover" : "";
+    panel.style.backgroundPosition = visual ? "center" : "";
+  });
+
   const openProject = document.getElementById("openProject");
   openProject.dataset.project = projectKey;
   openProject.setAttribute("href", data.link || "#");
@@ -136,7 +131,6 @@ function openCase(projectKey) {
 function closeCase() {
   const modal = document.getElementById("caseModal");
   if (!modal) return;
-
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
@@ -222,14 +216,9 @@ function setupCustomCursor() {
   document.addEventListener("mouseenter", () => setVisibility(true));
   document.addEventListener("mouseleave", () => setVisibility(false));
 
-  document.querySelectorAll("a, button, .project-tile, .lab-tab").forEach((element) => {
+  document.querySelectorAll("a, button, .project-tile, .lab-tab, .signal-card, .manifesto-card, .evidence-card, .about-card").forEach((element) => {
     element.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
     element.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
-  });
-
-  document.querySelectorAll("input, textarea").forEach((element) => {
-    element.addEventListener("mouseenter", () => document.body.classList.add("cursor-hidden"));
-    element.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hidden"));
   });
 
   animate();
@@ -255,17 +244,9 @@ function setupMagneticButtons() {
 function setupEvents() {
   document.querySelectorAll(".project-tile").forEach((tile) => {
     const handler = () => setActiveProject(tile.dataset.project);
-
     tile.addEventListener("mouseenter", handler);
     tile.addEventListener("focus", handler);
     tile.addEventListener("click", handler);
-    tile.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        setActiveProject(tile.dataset.project);
-        openCase(tile.dataset.project);
-      }
-    });
   });
 
   document.getElementById("openProject").addEventListener("click", (event) => {

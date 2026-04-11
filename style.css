@@ -101,12 +101,15 @@ button {
   height: 48px;
   padding: 0 16px;
   border-radius: 999px;
-  background: var(--text);
-  color: #fff8ef;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--text);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 30px rgba(29, 22, 16, 0.08);
 }
 
 .brand-copy {
@@ -276,6 +279,31 @@ button {
   backdrop-filter: blur(14px);
 }
 
+.signal-card,
+.project-tile,
+.project-preview,
+.manifesto-card,
+.evidence-card,
+.about-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.signal-card::before,
+.project-tile::before,
+.project-preview::before,
+.manifesto-card::before,
+.evidence-card::before,
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0.02));
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
 .signal-main {
   padding: 28px;
   border-radius: calc(var(--radius-lg) - 4px);
@@ -381,10 +409,22 @@ button {
 .manifesto-card:hover,
 .evidence-card:hover,
 .project-tile:hover,
-.about-card:hover {
+.about-card:hover,
+.signal-card:hover,
+.project-preview:hover {
   transform: translateY(-4px);
   border-color: var(--line-strong);
   background: rgba(255, 252, 246, 0.92);
+  box-shadow: 0 18px 40px rgba(29, 22, 16, 0.1);
+}
+
+.manifesto-card:hover::before,
+.evidence-card:hover::before,
+.project-tile:hover::before,
+.about-card:hover::before,
+.signal-card:hover::before,
+.project-preview:hover::before {
+  opacity: 1;
 }
 
 .manifesto-card span {
@@ -429,6 +469,21 @@ button {
   font-size: clamp(1.6rem, 3vw, 2rem);
   font-family: var(--serif);
   font-weight: 400;
+}
+
+.project-thumb {
+  margin: 10px 0 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  background: rgba(255,255,255,0.35);
+  aspect-ratio: 16 / 8;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-stats {
