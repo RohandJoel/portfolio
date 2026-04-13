@@ -18,47 +18,47 @@
       </a>
       <nav class="case-nav">
         <a href="#overview">Overview</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#goals">Goals</a>
+        <a href="#system">System</a>
         <a href="#process">Process</a>
         <a href="#wireframes">Wireframes</a>
         <a href="#screens">Screens</a>
-        <a href="#feedback">Feedback</a>
       </nav>
       <a class="case-home-link" href="index.html">Back to Portfolio</a>
     </header>
 
     <section class="case-section case-hero">
       <div class="reveal">
-        <p class="eyebrow">Community Platform · HXI / UX</p>
-        <h1>FemCare Community 2.0 makes hard questions easier to ask.</h1>
+        <p class="eyebrow">Community Platform &middot; HCI / UX</p>
+        <h1>FemCare Community makes hard questions easier to ask.</h1>
         <p class="hero-summary">
-          FemCare Community 2.0 is a discussion-driven menstrual-health community with anonymous posting,
-          peer stories, curated resources, saved posts, and profile-based participation. The core design problem
-          was not only information access, but how to lower embarrassment, uncertainty, and fear of being judged.
+          A calm health community with anonymous posting, helpful resources, peer stories, and a softer social experience.
         </p>
         <div class="hero-meta">
           <div class="hero-meta-card">
             <p class="meta-label">Role</p>
-            <p class="meta-value">UX Designer, Frontend Builder</p>
+            <p class="meta-value">UX Designer</p>
           </div>
           <div class="hero-meta-card">
-            <p class="meta-label">Interaction Focus</p>
-            <p class="meta-value">Anonymous posting, guided discovery, community trust</p>
+            <p class="meta-label">Focus</p>
+            <p class="meta-value">Trust, privacy, and easier posting</p>
           </div>
           <div class="hero-meta-card">
-            <p class="meta-label">Architecture</p>
-            <p class="meta-value">Discussions, resources, stories, saved, profile</p>
+            <p class="meta-label">Core Areas</p>
+            <p class="meta-value">Discussions, resources, stories, saved</p>
           </div>
           <div class="hero-meta-card">
-            <p class="meta-label">Backend Pattern</p>
-            <p class="meta-value">Firebase auth, posts, replies, stories, resources</p>
+            <p class="meta-label">System</p>
+            <p class="meta-value">Firebase auth and live content</p>
           </div>
         </div>
       </div>
       <div class="hero-stage reveal">
         <img src="assets/images/community/community-home-hero.png" alt="FemCare community home hero screenshot">
         <div class="hero-stage-caption">
-          <span>Actual screenshot from the community product.</span>
-          <span>Warm language + clear promise of safety.</span>
+          <span>Safe tone and clear first step.</span>
+          <span>Belonging comes before posting.</span>
         </div>
       </div>
     </section>
@@ -66,94 +66,293 @@
     <section class="case-section" id="overview">
       <div class="section-heading reveal">
         <p class="section-kicker">Overview</p>
-        <h2>Designing for users who need privacy before they post.</h2>
+        <h2>Designing for privacy, comfort, and confidence.</h2>
       </div>
-      <div class="two-col">
-        <div class="story-list">
-          <article class="story-card reveal">
-            <h3>Problem</h3>
-            <p>Many health communities feel too public or too hard to enter.</p>
-          </article>
-          <article class="story-card reveal">
-            <h3>Opportunity</h3>
-            <p>Use anonymity, support cues, and clear content to make posting easier.</p>
-          </article>
-          <article class="story-card reveal">
-            <h3>Experience Goal</h3>
-            <p>Make users feel safe enough to ask a question quickly.</p>
-          </article>
+      <div class="story-list">
+        <article class="story-card reveal">
+          <h3>Problem</h3>
+          <p>Users may feel shy, scared, or judged in health communities.</p>
+        </article>
+        <article class="story-card reveal">
+          <h3>Goal</h3>
+          <p>Make asking and reading feel safe from the start.</p>
+        </article>
+        <article class="story-card reveal">
+          <h3>Outcome</h3>
+          <p>Users can post anonymously, browse, save, and learn.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="challenge">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Project Brief</p>
+        <h2>The community needed to feel emotionally safe before asking users to post.</h2>
+      </div>
+      <div class="mini-table reveal">
+        <div class="mini-table-row">
+          <div class="mini-table-label">Challenge</div>
+          <div class="mini-table-value">Build a menstrual health community where users feel comfortable enough to ask personal questions.</div>
         </div>
-        <div class="note-banner reveal">
-          <p>
-            LunaFlow is a menstrual health awareness platform designed with a user-centered approach to support users who may feel hesitant or unsure when seeking sensitive health information. I developed two key features: a chatbot for quick, low-effort guidance and a community discussion page for peer support. The chatbot provides instant answers, reducing search effort and cognitive load, while the community enables users to share experiences, ask questions, and engage in structured conversations. Together, these features offer both immediate help and real user interaction, creating a more accessible, supportive, and engaging UX.
-          </p>
+        <div class="mini-table-row">
+          <div class="mini-table-label">Users</div>
+          <div class="mini-table-value">Teenagers, students, and young adults who may feel shy, worried, or judged.</div>
         </div>
+        <div class="mini-table-row">
+          <div class="mini-table-label">Need</div>
+          <div class="mini-table-value">More privacy, clearer support, and easier ways to read before posting.</div>
+        </div>
+        <div class="mini-table-row">
+          <div class="mini-table-label">Approach</div>
+          <div class="mini-table-value">Use trust cues, anonymous posting, simple navigation, and gentle community language.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Research</p>
+        <h2>Main findings that shaped the community flow.</h2>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card reveal">
+          <h3>Privacy is a first need</h3>
+          <p>Many users need low social risk before they feel ready to ask a question.</p>
+        </article>
+        <article class="insight-card reveal">
+          <h3>Reading comes before posting</h3>
+          <p>Resources and stories help users build confidence before joining a discussion.</p>
+        </article>
+        <article class="insight-card reveal">
+          <h3>Support should stay visible</h3>
+          <p>Helpful side content works best when it lives next to the main feed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="goals">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Goals</p>
+        <h2>What the product needed to achieve.</h2>
+      </div>
+      <div class="goal-grid">
+        <article class="goal-card reveal">
+          <h3>Make posting easier</h3>
+          <p>Reduce fear with anonymous options and softer entry points.</p>
+        </article>
+        <article class="goal-card reveal">
+          <h3>Support quiet users too</h3>
+          <p>Let users browse resources and stories before they speak.</p>
+        </article>
+        <article class="goal-card reveal">
+          <h3>Encourage return visits</h3>
+          <p>Use saved content, profiles, and stories to create a fuller loop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" id="system">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Design System</p>
+        <h2>Typography and full project color grid.</h2>
+      </div>
+      <div class="system-grid">
+        <article class="system-card reveal">
+          <p class="wireframe-label">Typography</p>
+          <h3>Friendly and easy to read</h3>
+          <div class="type-specimen">
+            <div class="type-sample serif">Lora</div>
+            <p class="type-note">Used for headers, titles, and key section names.</p>
+            <div class="type-sample sans">Nunito</div>
+            <p class="type-note">Used for body text, UI labels, cards, and forms.</p>
+          </div>
+          <div class="type-scale">
+            <div class="type-scale-row">
+              <span>Heading</span>
+              <strong>28 to 48px</strong>
+            </div>
+            <div class="type-scale-row">
+              <span>Section title</span>
+              <strong>18 to 24px</strong>
+            </div>
+            <div class="type-scale-row">
+              <span>Body</span>
+              <strong>14 to 16px</strong>
+            </div>
+            <div class="type-scale-row">
+              <span>Helper text</span>
+              <strong>12 to 13px</strong>
+            </div>
+          </div>
+        </article>
+        <article class="system-card reveal">
+          <p class="wireframe-label">Color Grid</p>
+          <h3>All hex colors found in the project CSS</h3>
+          <div class="palette-grid">
+            <div class="color-chip"><span class="swatch" style="background:#f7f3ee"></span><strong>#F7F3EE</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#efe9e0"></span><strong>#EFE9E0</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fdfaf7"></span><strong>#FDFAF7</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#ffffff"></span><strong>#FFFFFF</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fdf8f5"></span><strong>#FDF8F5</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fdf3dc"></span><strong>#FDF3DC</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fde8dc"></span><strong>#FDE8DC</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fdecea"></span><strong>#FDECEA</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#fcd9d5"></span><strong>#FCD9D5</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#edf7f5"></span><strong>#EDF7F5</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#dff0ed"></span><strong>#DFF0ED</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#e8f5e8"></span><strong>#E8F5E8</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#e8e6f7"></span><strong>#E8E6F7</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#e9c3b0"></span><strong>#E9C3B0</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#c8e0dd"></span><strong>#C8E0DD</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#a8d4cf"></span><strong>#A8D4CF</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#c47c5a"></span><strong>#C47C5A</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#9e5a3a"></span><strong>#9E5A3A</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#4a9087"></span><strong>#4A9087</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#336860"></span><strong>#336860</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#4a7a72"></span><strong>#4A7A72</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#5bc47a"></span><strong>#5BC47A</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#27ae60"></span><strong>#27AE60</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#2d6a2d"></span><strong>#2D6A2D</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#946800"></span><strong>#946800</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#5c56a0"></span><strong>#5C56A0</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#c0392b"></span><strong>#C0392B</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#3d3530"></span><strong>#3D3530</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#8a7f78"></span><strong>#8A7F78</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#bbb0a8"></span><strong>#BBB0A8</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#888"></span><strong>#888888</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#666"></span><strong>#666666</strong></div>
+            <div class="color-chip"><span class="swatch" style="background:#333"></span><strong>#333333</strong></div>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="case-section" id="process">
       <div class="section-heading reveal">
-        <p class="section-kicker">Process</p>
-        <h2>Turning a forum into an emotionally readable support space.</h2>
+        <p class="section-kicker">HCI Process</p>
+        <h2>Five steps that shaped the community.</h2>
       </div>
-      <div class="process-grid">
-        <article class="process-card reveal">
+      <div class="hci-flow">
+        <article class="hci-step reveal">
           <span>01</span>
-          <h3>Surface psychological safety</h3>
-          <p>The hero, wellness cards, and “You Are Safe Here” message all reinforce tone and moderation before deeper interaction begins.</p>
+          <h3>Empathize</h3>
+          <p>Understand fear of judgment and need for privacy.</p>
         </article>
-        <article class="process-card reveal">
+        <article class="hci-step reveal">
           <span>02</span>
-          <h3>Keep contribution lightweight</h3>
-          <p>Posting begins from a calm input box with anonymous toggle and simple topical categorization instead of heavy forms.</p>
+          <h3>Design</h3>
+          <p>Use warm visuals, calm text, and trust cues.</p>
         </article>
-        <article class="process-card reveal">
+        <article class="hci-step reveal">
           <span>03</span>
-          <h3>Layer support around the feed</h3>
-          <p>The discussion page pairs the main thread list with resource shortcuts, wellness tips, reassurance, and product chips.</p>
+          <h3>Ideate</h3>
+          <p>Combine discussions, resources, stories, and saved posts.</p>
         </article>
-        <article class="process-card reveal">
+        <article class="hci-step reveal">
           <span>04</span>
-          <h3>Reward return visits</h3>
-          <p>Saved posts, profiles, stories, and resources turn the product from one-off Q&amp;A into an ongoing support ecosystem.</p>
+          <h3>Prototype</h3>
+          <p>Build homepage, feed, resource grid, and profile flow.</p>
+        </article>
+        <article class="hci-step reveal">
+          <span>05</span>
+          <h3>Test</h3>
+          <p>Check if posting, browsing, and learning feel easy.</p>
         </article>
       </div>
     </section>
 
     <section class="case-section">
       <div class="section-heading reveal">
-        <p class="section-kicker">HXI Strategy</p>
-        <h2>Interaction decisions that reduce embarrassment and increase willingness to ask.</h2>
+        <p class="section-kicker">Design Process</p>
+        <h2>How the experience was shaped step by step.</h2>
+      </div>
+      <div class="timeline-grid">
+        <article class="timeline-card reveal">
+          <strong>01</strong>
+          <h3>Study user emotion</h3>
+          <p>Focus on fear of judgment, privacy, and hesitation.</p>
+        </article>
+        <article class="timeline-card reveal">
+          <strong>02</strong>
+          <h3>Plan the content model</h3>
+          <p>Separate discussions, resources, stories, saved, and profile.</p>
+        </article>
+        <article class="timeline-card reveal">
+          <strong>03</strong>
+          <h3>Build trust cues</h3>
+          <p>Add safe language, soft colors, and visible support around the feed.</p>
+        </article>
+        <article class="timeline-card reveal">
+          <strong>04</strong>
+          <h3>Refine usability</h3>
+          <p>Make posting, browsing, and reading easier across the key pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Key Views</p>
+        <h2>Support is built around the main feed.</h2>
       </div>
       <div class="impact-grid">
         <article class="impact-card reveal">
           <strong>Anonymous</strong>
-          <p class="impact-label">Posting is built into both quick-post and modal flows, lowering social risk for first questions.</p>
+          <p class="impact-label">Posting is easier when social risk is lower.</p>
         </article>
         <article class="impact-card reveal">
           <strong>5</strong>
-          <p class="impact-label">Core community destinations create a clear mental model: discussions, resources, stories, saved, profile.</p>
+          <p class="impact-label">Main areas: home, discussions, resources, stories, profile.</p>
         </article>
         <article class="impact-card reveal">
           <strong>Sidebar</strong>
-          <p class="impact-label">Contextual support sits beside the feed, so users can pivot to reading or self-soothing without leaving the page.</p>
+          <p class="impact-label">Tips and resources support users without breaking the flow.</p>
         </article>
         <article class="impact-card reveal">
-          <strong>Realtime</strong>
-          <p class="impact-label">Firebase-driven activity patterns make the community feel active, responsive, and alive.</p>
+          <strong>Live</strong>
+          <p class="impact-label">Realtime patterns help the space feel active and welcoming.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">User Flow</p>
+        <h2>From hesitation to participation.</h2>
+      </div>
+      <div class="flow-grid">
+        <article class="flow-card reveal">
+          <strong>01</strong>
+          <h3>Arrive</h3>
+          <p>User sees a calm homepage with clear signs of safety.</p>
+        </article>
+        <article class="flow-card reveal">
+          <strong>02</strong>
+          <h3>Browse</h3>
+          <p>User checks discussions, resources, or stories before posting.</p>
+        </article>
+        <article class="flow-card reveal">
+          <strong>03</strong>
+          <h3>Ask</h3>
+          <p>User shares a question with topic help and anonymous control.</p>
+        </article>
+        <article class="flow-card reveal">
+          <strong>04</strong>
+          <h3>Return</h3>
+          <p>User saves content, views profile activity, and comes back later.</p>
         </article>
       </div>
     </section>
 
     <section class="case-section" id="wireframes">
       <div class="section-heading reveal">
-        <p class="section-kicker">Reconstructed Wireframes</p>
-        <h2>Low-fidelity structure from the working product.</h2>
+        <p class="section-kicker">Wireframes</p>
+        <h2>Main components of the product structure.</h2>
       </div>
       <div class="wireframe-grid">
         <article class="wireframe-card reveal">
           <p class="wireframe-label">Wireframe 01</p>
-          <h3>Trust-first homepage</h3>
+          <h3>Trust-first home</h3>
           <div class="wireframe-screen">
             <div class="wf-browser"><span></span><span></span><span></span></div>
             <div class="wf-stack">
@@ -171,7 +370,7 @@
         </article>
         <article class="wireframe-card reveal">
           <p class="wireframe-label">Wireframe 02</p>
-          <h3>Discussion feed + support sidebar</h3>
+          <h3>Discussion feed</h3>
           <div class="wireframe-screen">
             <div class="wf-browser"><span></span><span></span><span></span></div>
             <div class="wf-stack">
@@ -208,59 +407,73 @@
       </div>
     </section>
 
+    <section class="case-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Design Decisions</p>
+        <h2>Choices that improved comfort and clarity.</h2>
+      </div>
+      <div class="decision-grid">
+        <article class="decision-card reveal">
+          <h3>Anonymous by design</h3>
+          <p>Privacy is built into the core posting flow, not added later.</p>
+        </article>
+        <article class="decision-card reveal">
+          <h3>Support around the feed</h3>
+          <p>Resources, wellness tips, and safe-space cues reduce overwhelm.</p>
+        </article>
+        <article class="decision-card reveal">
+          <h3>Reading-first pathways</h3>
+          <p>Stories and resources help users build confidence before speaking.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="case-section" id="screens">
       <div class="section-heading reveal">
-        <p class="section-kicker">Shipped Screens</p>
-        <h2>Actual UI captures from the product.</h2>
+        <p class="section-kicker">Screens</p>
+        <h2>Visual proof from the product UI.</h2>
       </div>
       <div class="screenshot-grid">
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-home-hero.png" alt="Community home hero screenshot">
           <div class="screenshot-caption">
-            <p class="screenshot-label">Home hero</p>
-            <p>The first screen foregrounds belonging and question safety before any heavy information or interaction demand.</p>
+            <p class="screenshot-label">Home</p>
+            <p>Belonging and safety are shown first.</p>
           </div>
         </article>
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-home-cards.png" alt="Community homepage cards screenshot">
           <div class="screenshot-caption">
-            <p class="screenshot-label">Pathway cards</p>
-            <p>Three clear next steps help users choose between discussion, resources, and stories without cognitive overload.</p>
+            <p class="screenshot-label">Path cards</p>
+            <p>Three simple ways to move forward.</p>
           </div>
         </article>
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-discussions-top.png" alt="Community discussion entry screenshot">
           <div class="screenshot-caption">
-            <p class="screenshot-label">Discussion entry</p>
-            <p>The top of the feed combines filters, search, anonymous posting, and resource shortcuts in one support-oriented view.</p>
+            <p class="screenshot-label">Post area</p>
+            <p>Search, filters, and anonymous posting in one view.</p>
           </div>
         </article>
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-discussions-feed.png" alt="Community discussion feed screenshot">
           <div class="screenshot-caption">
-            <p class="screenshot-label">Discussion feed</p>
-            <p>Post cards are readable, lightweight, and emotionally legible, using tags and anonymity chips to reduce social friction.</p>
+            <p class="screenshot-label">Feed</p>
+            <p>Readable cards with tags and low social pressure.</p>
           </div>
         </article>
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-resources.png" alt="Community resources screenshot">
           <div class="screenshot-caption">
             <p class="screenshot-label">Resources</p>
-            <p>The content library shifts the platform from pure community support into expert-guided self-education.</p>
+            <p>Users can learn before they post.</p>
           </div>
         </article>
         <article class="screenshot-card reveal">
           <img src="assets/images/community/community-stories.png" alt="Community stories screenshot">
           <div class="screenshot-caption">
             <p class="screenshot-label">Stories</p>
-            <p>User stories extend the product’s empathy model by making emotional validation visible and repeatable.</p>
-          </div>
-        </article>
-        <article class="screenshot-card reveal">
-          <img src="assets/images/community/community-profile.png" alt="Community profile screenshot">
-          <div class="screenshot-caption">
-            <p class="screenshot-label">Profile / retention loop</p>
-            <p>The profile page closes the feedback loop by showing participation history, saved content, and a reason to come back.</p>
+            <p>Shared stories make the space feel less lonely.</p>
           </div>
         </article>
       </div>
@@ -268,72 +481,68 @@
 
     <section class="case-section" id="feedback">
       <div class="section-heading reveal">
-        <p class="section-kicker"> User Feedback</p>
-        <h2>Sample user quotes in simple words.</h2>
+        <p class="section-kicker">Feedback</p>
+        <h2>How the space may feel to users.</h2>
       </div>
       <div class="feedback-grid">
         <article class="feedback-card reveal">
-          <blockquote>“Anonymous posting makes this feel much easier to use than a normal forum.”</blockquote>
-          <p class="feedback-role">Teen participant</p>
-          <p>The anonymity toggle directly addresses fear of exposure, which is often the biggest blocker in sensitive-topic communities.</p>
+          <blockquote>"Anonymous posting makes it much easier to ask."</blockquote>
+          <p class="feedback-role">Teen user</p>
+          <p>Privacy supports confidence.</p>
         </article>
         <article class="feedback-card reveal">
-          <blockquote>“I like that resources sit next to discussions, so I can read first if I’m nervous.”</blockquote>
+          <blockquote>"I can read resources first if I am nervous."</blockquote>
           <p class="feedback-role">First-time visitor</p>
-          <p>Supporting anxious users with alternate pathways helps prevent bounce or silent drop-off.</p>
+          <p>Reading before posting lowers pressure.</p>
         </article>
         <article class="feedback-card reveal">
-          <blockquote>“The stories page makes the whole platform feel less lonely.”</blockquote>
-          <p class="feedback-role">Young adult user</p>
-          <p>Community storytelling adds emotional proof, not just informational proof.</p>
+          <blockquote>"The stories page makes the platform feel human."</blockquote>
+          <p class="feedback-role">Student user</p>
+          <p>Peer voices add comfort and trust.</p>
         </article>
       </div>
     </section>
 
     <section class="case-section">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Usability</p>
-        <h2>What works best in the design.</h2>
-      </div>
       <div class="chart-grid">
         <article class="chart-card reveal">
-          <h3>Perceived comfort by workflow</h3>
+          <h3>Comfort by task</h3>
           <div class="chart-bars">
             <div class="chart-row">
               <div class="chart-label">Ask anonymously</div>
               <div class="chart-track"><div class="chart-fill" style="width: 92%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Browse before posting</div>
+              <div class="chart-label">Browse first</div>
               <div class="chart-track"><div class="chart-fill" style="width: 86%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Read shared stories</div>
+              <div class="chart-label">Read stories</div>
               <div class="chart-track"><div class="chart-fill" style="width: 84%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Save a discussion</div>
+              <div class="chart-label">Save content</div>
               <div class="chart-track"><div class="chart-fill" style="width: 73%"></div></div>
             </div>
           </div>
         </article>
         <article class="chart-card reveal">
-          <h3>Interaction quality</h3>
+          <h3>HCI strengths</h3>
           <div class="chart-bars">
             <div class="chart-row">
-              <div class="chart-label">Psychological safety cues</div>
+              <div class="chart-label">Safety cues</div>
               <div class="chart-track"><div class="chart-fill mint" style="width: 91%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Navigation clarity</div>
+              <div class="chart-label">Navigation</div>
               <div class="chart-track"><div class="chart-fill mint" style="width: 83%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Conversation readiness</div>
+              <div class="chart-label">Ease of posting</div>
               <div class="chart-track"><div class="chart-fill mint" style="width: 88%"></div></div>
             </div>
             <div class="chart-row">
-              <div class="chart-label">Resource discoverability</div>
+              <div class="chart-label">Resource access</div>
               <div class="chart-track"><div class="chart-fill mint" style="width: 82%"></div></div>
             </div>
           </div>
@@ -341,29 +550,8 @@
       </div>
     </section>
 
-    <section class="case-section">
-      <div class="quote-wall">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Design Insight</p>
-          <h2>FemCare Community works because it treats emotional readiness as part of navigation design.</h2>
-        </div>
-        <div class="quote-stack">
-          <div class="quote-card reveal">
-            <p class="quote-label">Why it matters</p>
-            <blockquote>Users do not arrive ready to speak. The interface has to earn that readiness.</blockquote>
-            <p>The product does this with privacy cues, soft visuals, visible moderation language, and optional reading-first pathways.</p>
-          </div>
-          <div class="quote-card reveal">
-            <p class="quote-label">HXI Takeaway</p>
-            <blockquote>The best community interaction pattern here is not a feature. It is the lowering of social risk.</blockquote>
-            <p>That makes the product more than a forum UI. It becomes a designed emotional environment for vulnerable conversations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <div class="footer-back">
-      <p class="hero-summary" style="margin:0;">FemCare Community 2.0 demonstrates a clear HXI principle: socially sensitive spaces need interaction design that protects confidence before asking for expression.</p>
+      <p class="hero-summary" style="margin:0;">FemCare Community shows how HCI can reduce social risk and make vulnerable conversations easier to begin.</p>
       <a class="case-home-link" href="lunacare-case-study.html">View LunaCare</a>
     </div>
   </div>
@@ -371,5 +559,3 @@
   <script src="case-study.js"></script>
 </body>
 </html>
-
-
